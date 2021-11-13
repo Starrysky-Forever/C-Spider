@@ -19,6 +19,10 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
+#include <openssl/ssl.h>
+#include <openssl/err.h>
+
+#include <sys/mman.h>
 
 int SOCKET(int domain, int type, int protocal);
 int BIND(int sockfd, const struct sockaddr *addr, socklen_t addrlen);

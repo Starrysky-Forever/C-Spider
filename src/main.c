@@ -3,17 +3,8 @@
 
 int main(void)
 {
-	int webfd;
-	char request_head[4096];
-	url_t node;
-	webfd = spider_net_init();
-	const char *str = "http://pic1.win4000.com/wallpaper/2018-05-16/5afb9b5997e48.jpg";
-
-	strcpy(node.origin_url, str);
-	spider_analytical_url(&node);
-	spider_connect_webserver(webfd, node);
-	spider_create_request(request_head, node);
-	spider_request_response(webfd, request_head, node);
+	//spider_url_controler("https://ak.hypergryph.com/#");
+	spider_url_controler("https://baike.baidu.com/item/%E7%9A%87%E6%97%8F%E7%94%B5%E5%AD%90%E7%AB%9E%E6%8A%80%E4%BF%B1%E4%B9%90%E9%83%A8/20846255?fromtitle=RNG&fromid=20131555&fr=aladdin");
 
 	return 0;
 }
